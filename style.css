@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+#players-info {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+#turn-info {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: 2px solid #333;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cell:hover {
+  background: #f0f0f0;
+}
+
+.score-board {
+  padding: 15px;
+  border: 2px solid #333;
+  background: #e3f2fd;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.score-board h2 {
+  margin-top: 0;
+}
+
+#notification {
+  margin: 15px 0;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  background: #444;
+  border-radius: 8px;
+  display: inline-block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background: #555;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
